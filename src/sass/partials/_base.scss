@@ -1,0 +1,17 @@
+// Site specifc base styles - should only ever contain element selectors
+
+*, *:after, *:before {
+	@include box-sizing(border-box);
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background-color: $color-bg;
+}
+
+p {
+	padding-bottom: 2em;
+}

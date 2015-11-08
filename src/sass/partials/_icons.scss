@@ -1,0 +1,73 @@
+// Generic icon classes to be used site wide. Adjustments should be made in the specific module.
+.icon-left {
+	@include rem-to-px('padding-left',ms(5)*1.2,$typ-base-pixels);
+	min-height: 15px;
+}
+.icon-right {
+	&.icon-tick {
+		@include rem-to-px('padding-right',ms(4),$typ-base-pixels);
+		background: transparent url(../img/icon-tick.png) 100% 0 no-repeat;
+		background-size: 20px;
+		@include media($single-medium) {
+			background: transparent url(../img/icon-tick.png) 97% 2px no-repeat;
+			background-size: 25px;
+		}
+		@include media($medium) {
+			background: transparent url(../img/icon-tick.png) 97% 40% no-repeat;
+			background-size: 25px;
+		}
+	}
+}
+.icon-phone {
+	background: transparent url(../img/icon-phone.png) ms(3) 50% no-repeat;
+	background-size: 10px;
+}
+.icon-email {
+	background: transparent url(../img/icon-email.png) ms(2) 50% no-repeat;
+	background-size: 20px;
+}
+.icon-mobile {
+	background: transparent url(../img/icon-mobile.png)  ms(3) 50% no-repeat;
+	background-size: 16px;
+}
+.icon-facebook {
+	background: transparent url(../img/icon-facebook.png) ms(1)*1.2 50% no-repeat;
+	background-size: 26px;
+}
+.icon-car {
+	background: transparent url(../img/icon-car.png) 0 50% no-repeat;
+	background-size: 20px;
+	@include rem-to-px('padding-left',ms(3)*1.4,$typ-base-pixels);
+}
+.icon-tick {
+	background: transparent url(../img/icon-tick.png) ms(0)/2 50% no-repeat;
+	background-size: 35px;
+	@include rem-to-px('padding-left',ms(3)*2,$typ-base-pixels);
+	@include media($single-big) {
+		background: transparent url(../img/icon-tick.png) ms(1) 50% no-repeat;
+		background-size: 35px;
+	}
+}
+// .no-svg {
+// 	.icon-link {
+// 		@include rem-to-px('padding-left',ms(0) * 1.4,$typ-base-pixels);
+// 	}
+// 	.icon-mobile {
+// 		background-image: url(../img/icon-mobile.png);
+// 	}
+// 	.icon-tick {
+// 		background-image: url(../img/icon-tick.png);
+// 	}
+// 	.icon-phone {
+// 		background-image: url(../img/icon-phone.png);
+// 	}
+// 	.icon-email {
+// 		background-image: url(../img/icon-email.png);
+// 	}
+// 	.icon-car {
+// 		background-image: url(../img/icon-car.png);
+// 	}
+// 	.icon-facebook {
+// 		background-image: url(../img/icon-facebook.png);
+// 	}
+// }

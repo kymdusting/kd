@@ -1,0 +1,32 @@
+// breakpoints
+
+$S:   320px;
+$M:   768px;
+$L:   1170px;
+$HS: 	400px;
+$HM:  640px;
+$HH: 	641px;
+
+// media queries
+
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media only screen and (min-width: $S) { @content; }
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; }
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; }
+  }
+  @else if $canvas == HS{
+   @media only screen and (max-height: $HS) { @content; }
+  }
+  @else if $canvas == HM {
+   @media only screen and (max-height: $HM) { @content; }
+  }
+  @else if $canvas == HH {
+   @media only screen and (min-height: $HH) { @content; }
+  }
+}
+

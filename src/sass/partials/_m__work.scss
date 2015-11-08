@@ -1,0 +1,10 @@
+// Work panel mods
+
+.panel--work {
+	background: $color-1;
+	.panel__content {
+		> ul {
+			float: right;
+		}
+	}
+}

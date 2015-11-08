@@ -1,0 +1,23 @@
+// About panel mods
+
+.panel--about {
+	background: $color-1;
+	@include MQ(M) {
+		background: url('../img/bg-cover.png') repeat-y 0 0;
+		background-size: 50%;
+	}
+	.panel__content {
+		h1 {
+  		border: 2px solid $color-2;
+			color: $color-2;
+			@include MQ(M) {
+				color: $color-1;
+				border-color: $color-1;
+				font-weight: 300;
+				@include center;
+				position: absolute;
+				left: 75%;
+			}
+		}
+	}
+}

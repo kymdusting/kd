@@ -1,0 +1,42 @@
+// Grid module
+
+.grid {
+	border-bottom: 1px dotted white;
+	display: flex;
+	flex-flow: row-reverse wrap-reverse;
+	justify-content: flex-end;
+	&::after { /* clearfix */
+		content: '';
+		display: table;
+		clear: both;
+	}
+	li {
+		height: 225px;
+		width: 100%;
+		@include MQ(S) {
+			height: 225px;
+			width: 50%;
+		}
+		@include MQ(M) {
+			height: 200px;
+			width: 33.33333%;
+		}
+		@include MQ(L) {
+			height: 175px;
+			width: 25%;
+		}
+		background: $color-5;
+		display: inline-block;
+		border-right: 1px dotted white;
+		border-top: 1px dotted white;
+		float: right;
+		overflow: hidden;
+		a {
+			display: block;
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}

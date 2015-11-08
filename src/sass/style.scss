@@ -1,0 +1,60 @@
+@import 'bourbon'; // http://bourbon.io/
+
+@import 'partials/variables'; // colors, fonts etc...
+@import 'partials/mixins'; // custom mixins
+
+@import 'partials/normalize'; // reset stuff
+@import 'partials/base'; // tag based stuff
+@import 'partials/type'; // custom mixins
+@import 'partials/layout'; // responsive grid and media queries
+@import 'partials/bg'; // fixed backgrounds to be exposed through other content
+
+@import 'partials/m__nav'; // navigation module
+@import 'partials/m__menutrigger'; // menu action module
+@import 'partials/m__main'; // main content and panels module
+@import 'partials/m__asides'; // header and footer module
+@import 'partials/m__intro'; // intro panel module
+@import 'partials/m__about'; // about panel module
+@import 'partials/m__work'; // work panel module
+@import 'partials/m__grid'; // grid module
+@import 'partials/m__project'; // project module
+@import 'partials/m__contact'; // contact module
+
+
+body {overflow-x: hidden;}
+.temp {
+	h1 {
+		left: 1em;
+		top: 25%;
+		transform: none;
+		@include MQ(HM) {
+			top: 14px;
+		}
+		@include MQ(M) {
+			left: 2em;
+			top: 35%;
+		}
+		@include MQ(HS) {
+			top: 15%;
+		}
+	}
+  .social {
+    position: absolute;
+    right: 1em;
+    top: 12%;
+    z-index: 3;
+		@include MQ(HM) {
+			top: 5px;
+		}
+		@include MQ(M) {
+			top: 22%;
+		}
+		@include MQ(HS) {
+			top: -5%;
+		}
+    li {
+      display: inline-block;
+      padding: 0 .5em;
+    }
+  }
+}

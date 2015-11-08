@@ -1,0 +1,70 @@
+// Intro panel mods
+
+.panel--intro {
+	h1 {
+		padding: 0;
+		border: none;
+		@include center;
+		position: absolute;
+		width: 100%;
+		top: 29%;
+		max-width: 400px;
+		@include MQ(HS) {
+			top: 28%;
+			max-width: 300px;
+		}
+		@include MQ(HH) {
+			top: 40%;
+		}
+	}
+
+	p {
+		@extend h1;
+		@extend .h1;
+		color: $color-1;
+		border-color: $color-1;
+		@include center;
+		position: absolute;
+		top: 60%;
+		width: 80%;
+		max-width: 400px;
+		@include MQ(HM) {
+			top: 60%;
+			width: 70%;
+		}
+		@include MQ(HS) {
+			top: 60%;
+			width: 80%;
+			padding: 10px;
+		}
+	}
+
+	@include MQ(M) {
+		background: url('../img/bg-cover.png') repeat-y 100% 0;
+		background-size: 50%;
+		h1 {
+			@include center;
+			width: 40%;
+			left: 25%;
+			@include font-size(26px);
+			max-width: 500px;
+			margin: 0;
+		}
+		p {
+			color: $color-2;
+  		border-color: $color-2;
+			@include center;
+			left: 75%;
+			width: auto;
+			margin: 0;
+		}
+	}
+
+	.no-js & {
+		height: 640px;
+	}
+
+	img {
+		width: 80%;
+	}
+}

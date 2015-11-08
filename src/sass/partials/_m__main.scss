@@ -1,0 +1,92 @@
+// All high-level main styles, panels etc
+
+.main-content {
+	position: relative;
+	height: 100%;
+	// overflow: hidden;
+	// background-color: $color-1;
+
+	/* slightly visible only when we resize this element */
+	box-shadow: 0 0 40px rgba(#000, .8);
+
+	// z-index: $main-zindex;
+
+	/* Force Hardware Acceleration in WebKit */
+	// -webkit-transform: translateZ(0);
+	// -webkit-backface-visibility: hidden;
+
+	@include transition-property (transform);
+	@include transition-duration(.5s);
+
+	&.move-out {
+		@include transform(scale(.6));
+		overflow: hidden;
+	}
+
+	.no-js & {
+		height: auto;
+		overflow-x: auto;
+		overflow-y: auto;
+	}
+}
+
+// Generic heading class to be used for the purpose of extending
+.h1 {
+  text-transform: uppercase;
+  padding: 1.4em 2em;
+  border: 2px solid $color-2;
+  margin: 1em auto 4em;
+  width: 80%;
+  max-width: 400px;
+	@include MQ(HM) {
+	  position: absolute;
+	  width: auto;
+	  bottom: auto;
+	  right: auto;
+		@include center;
+		left: 75%;
+	}
+	@include MQ(M) {
+		@include center;
+		position: absolute;
+		margin: 0;
+	}
+}
+
+.panel {
+	position: relative;
+	min-height: 100%;
+	h1 {
+		@extend .h1;
+		@include MQ(M) {
+			@include center;
+			position: absolute;
+			left: 75%;
+			width: auto;
+		}
+	}
+	@include MQ(M) {
+		border: 50px solid $color-1;
+		border-top: 80px solid $color-1;
+		border-bottom: 80px solid $color-1;
+	}
+}
+
+.panel__container {
+	position: relative;
+	margin: 0 auto;
+	padding: 2em 0 0;
+	&::after { /* clearfix */
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+.panel__content {
+	@include MQ(M) {
+		padding: 1em 1em 0 0;
+		width: 50%;
+		float: left;
+	}
+}

@@ -1,0 +1,26 @@
+// colors
+
+$color-1: #ffffff; // dark purple
+$color-2: #000000; // black
+$color-3: #d26c64; // red
+$color-5: rgba(0,0,0,.6); // trans black high
+$color-6: rgba(0,0,0,.1); // trans black low
+$color-7: rgba(255,255,255,.8); // trans white high
+$color-bg: darken($color-1, 5%); // body background color - visible when main element scales down
+
+// z-index
+
+$main-zindex: 1;
+$nav-zindex: 3;
+$shadow-zindex: 2;
+
+// nav
+
+$menu-items-number: 4;
+
+// Font declarations
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans+Condensed:300,300italic,700);
+
+// fonts
+$primary-font: 'Open Sans Condensed';
+$heading-font: 'Montserrat', sans-serif;

@@ -1,0 +1,26 @@
+// Contact module
+
+.contact {
+	@include MQ(M) {
+		background: url('../img/bg-cover.png') repeat-y 0 0;
+		background-size: 50%;
+	}
+	h1 {
+		color: $color-1;
+		border-color: $color-1;
+	}
+	.grid {
+		// @include center;
+		// position: absolute;
+		// left: 25%;
+		// top: 100%;
+		li {
+			height: 225px;
+			width: 100%;
+			@include MQ(S) {
+				height: 225px;
+				width: 50%;
+			}
+		}
+	}
+}

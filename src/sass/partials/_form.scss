@@ -1,0 +1,43 @@
+// Global form styles
+
+form {
+	@include rem-to-px('margin-top',ms(6),$typ-base-pixels);
+}
+input, select, textarea, button {
+	@include rem-to-px('padding',ms(0),$typ-base-pixels);
+	@include rem-to-px('margin-top',ms(0),$typ-base-pixels);
+	@include rem-to-px('margin-bottom',ms(4),$typ-base-pixels);
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+  display: block;
+  opacity: .8;
+  width: 66.66666%;
+	@include media($medium) {
+		width: 33.33333%;
+	}
+	@include media($big) {
+		width: 33.33333%;
+	}
+	@include media($mega) {
+		width: 25%;
+	}
+}
+select {
+	height: 50px;
+	padding: 14px;
+}
+label {
+	background: $clr-background-o;
+	@include rem-to-px('padding',ms(0),$typ-base-pixels);
+}
+textarea {
+	height: 150px;
+}
+button {
+	color: $clr-light;
+	background: $clr-background-alt-o;
+	&:hover, &:focus {
+		background: $clr-background-alt;
+	}
+}

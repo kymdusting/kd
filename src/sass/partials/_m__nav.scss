@@ -1,0 +1,133 @@
+// Navigation module, handles all states of the navigation for all viewport sizes
+
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: $color-1;
+
+	/* Force Hardware Acceleration in WebKit */
+	-webkit-transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+
+	/* we move this element off the canvas */
+	@include transform(translateY(-100%));
+
+	@include transition-property (transform);
+	@include transition-duration(.5s);
+	z-index: $nav-zindex;
+
+	> ul {
+		height: 100%;
+
+		> li {
+			height: 100% / $menu-items-number; // see partials > _variables.scss
+
+			> a {
+				position: relative;
+				display: block;
+				padding: 0 10%;
+				height: 100%;
+				border-bottom: 1px solid darken($color-2, 5%);
+
+				span {
+					position: absolute;
+					@include center; // see partials > _mixins.scss
+				}
+
+				.no-touch &:hover {
+					background-color: #FFF;
+					color: $color-3;
+				}
+			}
+
+			&:last-child a {
+				border-bottom: none;
+			}
+		}
+
+	}
+
+	&.is-visible {
+		box-shadow: 0 0 20px rgba(#000, .4);
+		@include transform(translateY(0));
+	}
+
+	.no-js & {
+		position: static;
+		@include transform(translateY(0));
+
+		.close {
+			display: none;
+		}
+	}
+}
+
+.close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-color: $color-3;
+
+	/* image replacement */
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+
+	&::before, &::after {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		top: 18px;
+		left: 10px;
+		width: 20px;
+		height: 3px;
+		background-color: #FFF;
+
+		@include transition-property (transform);
+		@include transition-duration(.3s);
+	}
+
+	&::before {
+		@include transform(rotate(45deg));
+	}
+
+	&::after {
+		@include transform(rotate(135deg));
+	}
+
+	.no-touch &:hover {
+		&::before {
+			@include transform(rotate(225deg));
+		}
+
+		&::after {
+			@include transform(rotate(315deg));
+		}
+	}
+}
+
+.shadow-layer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(#000, .4);
+	z-index: $shadow-zindex;
+	opacity: 0;
+	visibility: hidden;
+
+	@include transition(visibility 0s .5s, opacity .5s 0s);
+
+	&.is-visible {
+		opacity: 1;
+		visibility: visible;
+		@include transition-delay(0s);
+	}
+}

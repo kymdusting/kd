@@ -1,0 +1,74 @@
+// FONT DECLARATIONS
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans+Condensed:300,300italic,700);
+
+$primary-font: 'Open Sans Condensed';
+$heading-font: 'Montserrat', sans-serif;
+
+// GLOBAL FONT STYLES
+body {
+	font-family: $primary-font;
+	@include font-size(18px);
+	line-height: 2em;
+}
+
+h1 {
+	font-family: $heading-font;
+	font-weight: 700;
+	letter-spacing: 2px;
+	word-spacing: 2px;
+	text-transform: uppercase;
+  text-align: center;
+  line-height: 1.6em;
+  @include font-size(14px);
+  color: $color-2;
+}
+
+p {
+	font: {
+		size: 80%;
+	}
+	letter-spacing: 1px;
+}
+
+a {
+	color: $color-3;
+	text-decoration: none;
+}
+
+// MODULE SPECIFIC STYLES
+.nav {
+	font: {
+		family: $heading-font;
+	}
+	a {
+		color: $color-2;
+		@include font-size(20px);
+		text-transform: uppercase;
+		letter-spacing: 8px;
+		font-weight: 300;
+		color: black;
+	}
+}
+
+.menu-trigger {
+	font-family: $heading-font;
+	line-height: 50px;
+	text-transform: uppercase;
+	color: $color-3;
+	@include font-size(14px);
+}
+
+.panel--about {
+	.panel__content {
+		h1 {
+			// color: $color-1;
+			// font-weight: 300;
+		}
+	}
+}
+
+.full-stop {
+	@include font-size(20px);
+	vertical-align: middle;
+}

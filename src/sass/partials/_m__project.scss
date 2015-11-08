@@ -1,0 +1,39 @@
+// Project module
+
+// Container for all projects and controls to live in
+.projects {
+	width: 100%;
+	min-height: 100%;
+}
+
+.project-showing {
+	position: fixed;
+	.projects {
+		position: absolute;
+		top: 0;
+	}
+}
+
+.m__project {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	background: white;
+	min-height: 100%;
+}
+
+.m__project--close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 4;
+}
+
+.m__project--tags {
+	li {
+		display: inline-block;
+		background: #eee;
+		padding: 0;
+	}
+}

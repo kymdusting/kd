@@ -1,0 +1,32 @@
+// Background elements that are purely decorative
+
+.fixed-bg {
+	position: fixed;
+	background: url('../img/kymdusting.com.png') no-repeat center center;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	video {
+		display: none;
+		@include MQ(M) {
+			display: block;
+		}
+	}
+}
+
+.fixed-bg--alt {
+	@include MQ(M) {
+		left: 50%;
+		background: url('../img/bg-img.jpg') no-repeat 0 50%;
+		display: block;
+	}
+}
+
+.fixed-bg__video {
+	position: fixed; right: 0; bottom: 0;
+	min-width: 100%; min-height: 100%;
+	width: auto; height: auto; z-index: -100;
+	background: url('../img/kymdusting.com.png') no-repeat;
+	background-size: cover;
+}
